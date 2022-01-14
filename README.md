@@ -1,4 +1,4 @@
-#LSB Algorithm
+# LSB Algorithm
 Implementation of the **Least Significant Bit Algorithm** for Image Steganography.<br/><br/>
 By:<br/>
 Saniya Bhargava<br/>
