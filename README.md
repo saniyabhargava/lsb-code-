@@ -1,5 +1,6 @@
-Implementation of LSB-algorithm for Image Steganography
-ACM'24
-Saniya Bhargava
-Sonali R
-Poorna Hegde
+Implementation of LSB-algorithm for Image Steganography<br/>
+By:<br/>
+Saniya Bhargava<br/>
+Sonali R<br/>
+Poorna Hegde<br/>
+ACM'24<br/>
