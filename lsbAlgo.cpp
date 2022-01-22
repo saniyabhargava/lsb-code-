@@ -8,11 +8,7 @@
 using namespace std;
 using namespace cv;
 
-// Checks whether the bit is set or not at a particular position.
-// Returns true if set
-// Returns false if not set
 bool isBitSet(char ch, int pos) {
-	// 7 6 5 4 3 2 1 0
 	ch = ch >> pos;
 	if(ch & 1)
 		return true;
