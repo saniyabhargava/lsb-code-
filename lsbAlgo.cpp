@@ -67,8 +67,6 @@ int funcEncode(int argc, char** argv) {
 				// stores the pixel details
 				Vec3b pixel = inputImage.at<Vec3b>(Point(r,c));
 
-				// if bit is 1 : change LSB of present color value to 1.
-				// if bit is 0 : change LSB of present color value to 0.
 				if(isBitSet(ch,7-bit_count))
 					//LSB changed to 1
 					pixel.val[color] |= 1;          
@@ -76,7 +74,7 @@ int funcEncode(int argc, char** argv) {
 					//LSB changed to 0
 					pixel.val[color] &= 0;
 
-				// update the inputImage with the changed pixel values
+				// update the image with the changed pixel values
 				inputImage.at<Vec3b>(Point(r,c)) = pixel;
 
 				// increment bit_count to work on next bit
@@ -157,7 +155,7 @@ int funcDecode(char* argv) {
 				// stores the pixel details
 				Vec3b pixel = inputDImage.at<Vec3b>(Point(r,c));
 
-				// manipulate char bits accolording to the LSB of pixel values
+				// manipulate char bits according to the LSB of pixel values
 				if(isBitSet(pixel.val[color],0))
 					ch |= 1;
 
@@ -205,15 +203,12 @@ int main(){
     {
         case 1:
 		{
-			
-			//strcpy(str[0],"inputImage.png");
 			funcEncode(3,str);
 			break;
 		}
         
         case 2:
 		{
-			
 			funcDecode(strD);
 			break;
 		}
